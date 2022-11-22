@@ -26,3 +26,4 @@ postsRouter.get('/', async (req,res) => {
     res.send({post});
 })
 
+module.exports = postsRouter;
