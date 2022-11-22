@@ -130,6 +130,7 @@ async function createTables() {
     }
     try {
       await client.query(`
+      CREATE TABLE posts (
       id SERIAL PRIMARY KEY,
       "authorId" INTEGER REFERENCES users(id) NOT NULL,
       title VARCHAR(255) NOT NULL,
@@ -161,20 +162,8 @@ async function createTables() {
     } catch (error) {
       throw error;
     }
-    try {
-      await client.query(`
-      CREATE TABLE posts (
-      id SERIAL PRIMARY KEY,
-      authorId" INTEGER REFERENCES users(id),
-     title varchar(255) NOT NULL,
-      content TEXT NOT NULL,
-      active BOOLEAN DEFAULT true
-      );
-      `);
-    } catch (error) {
-      throw error;
     }
-}
+
 
 
 async function updateUser(id, fields = {} ) {
