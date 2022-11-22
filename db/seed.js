@@ -37,7 +37,7 @@ async function createInitialUsers() {
     try {
         console.log("Beginning to create users..");
 
-        await createUser({username: "albert", password: "bertie99", name: "albert", location: USA});
+        await createUser({username: "albert", password: "bertie99", name: "albert", location: "USA"});
         await createUser({username: "albert2", password: "imposteralbert", name: "albert", location:"Canada"});
 
         console.log("Finished creating users");
