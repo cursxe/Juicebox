@@ -260,6 +260,7 @@ async function createPost({
 module.exports = {
     client,
     getAllUsers,
+    getAllPosts,
     createUser,
     createPost,
     updatePost,
