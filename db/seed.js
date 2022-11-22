@@ -124,8 +124,7 @@ async function createTables() {
             location VARCHAR(255) NOT NULL,
             active BOOLEAN DEFAULT true
             );
-        )`
-        )
+        `)
     } catch (error) {
         throw error;
     }
