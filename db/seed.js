@@ -1,4 +1,11 @@
-const {client, getAllUsers,createUser } = require('./index');
+const {client,
+  getAllUsers,
+  getAllPosts,
+  createUser,
+  createPost,
+  createTags,
+  updatePost,
+  getUserByUsername,} = require('./index');
 
 async function createInitialPosts() {
   try {
