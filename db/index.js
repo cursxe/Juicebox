@@ -159,7 +159,7 @@ async function createPost({
       await client.query(
         `
       INSERT INTO tags(name)
-      VALUES (${valueStringInsert})
+      VALUES (${insertValues})
       ON CONFLICT (name) DO NOTHING;
       `,
       tagList
@@ -168,7 +168,7 @@ async function createPost({
       const { rows } = await client.query(`
       SELECT * FROM tags
       WHERE name
-      IN (${valueStringSelect});
+      IN (${selectValues});
 
       `,
       tagList);
