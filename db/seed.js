@@ -46,6 +46,7 @@ async function createInitialUsers() {
 
         await createUser({username: "albert", password: "bertie99", name: "albert", location: "USA"});
         await createUser({username: "albert2", password: "imposteralbert", name: "albert", location:"Canada"});
+        await createUser({username: "albert3", password: "imposteralbert2", name: "albert2", location:"Canada"});
 
         console.log("Finished creating users");
     }   catch(error) {
