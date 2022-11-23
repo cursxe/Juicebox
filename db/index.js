@@ -266,4 +266,5 @@ module.exports = {
     createTags,
     updatePost,
     getUserByUsername,
+    addTagsToPost,
 }

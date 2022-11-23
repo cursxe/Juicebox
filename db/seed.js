@@ -5,6 +5,7 @@ const {client,
   createPost,
   createTags,
   updatePost,
+  addTagsToPost,
   getUserByUsername,} = require('./index');
 
 async function createInitialPosts() {
