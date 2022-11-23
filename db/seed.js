@@ -107,7 +107,6 @@ async function rebuildDB() {
     await createInitialUsers();
     await createInitialPosts();
     await createInitialTags();
-    await createUser();
   } catch (error) {
     console.log("Error during rebuildDB")
     throw error;
