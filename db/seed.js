@@ -42,7 +42,7 @@ async function createInitialUsers() {
 
         console.log("Finished creating users");
     }   catch(error) {
-        console.error("Error creatign users");
+        console.error("Error creating users");
         throw error;
     }
 }
@@ -107,6 +107,7 @@ async function rebuildDB() {
     await createInitialUsers();
     await createInitialPosts();
     await createInitialTags();
+    await createUser();
   } catch (error) {
     console.log("Error during rebuildDB")
     throw error;
@@ -174,7 +175,7 @@ async function updateUser(id, fields = {} ) {
     return;
   }
   try {
-    const result  =await client.query(`
+    const result = await client.query(`
     UPDATE users
     set ${ setString }
     WHERE id=${ id }
