@@ -85,7 +85,7 @@ async function createPost({
       INSERT INTO posts("authorId", title, content) 
       VALUES($1, $2, $3)
       RETURNING *;
-      `[authorId, title, content]);
+      `,[authorId, title, content]);
       
       const tagList = await createTags(tags);
       return await addTagsToPost(post.id, tagList);
